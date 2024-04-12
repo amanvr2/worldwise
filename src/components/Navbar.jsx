@@ -1,15 +1,17 @@
-import { NavLink } from 'react-router-dom';
-import styles from '../css/Navbar.module.css';
-import Logo from './Logo';
+import { Link, NavLink } from "react-router-dom";
+import styles from "../css/Navbar.module.css";
+import Logo from "./Logo";
 
 function Navbar() {
   return (
     <nav className={styles.nav}>
-      <Logo />
+      <Link to="/">
+        <Logo />
+      </Link>
       <ul>
-        <li>
+        {/* <li>
           <NavLink to="/pricing">Pricing</NavLink>
-        </li>
+        </li> */}
         <li>
           <NavLink to="/product">Product</NavLink>
         </li>

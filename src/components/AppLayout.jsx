@@ -1,5 +1,15 @@
+import Sidebar from "./Sidebar";
+
+
+import styles from "../css/AppLayout.module.css";
+
 function AppLayout() {
-  return <h2>App</h2>;
+  return (
+    <div className={styles.app}>
+      <Sidebar />
+    
+    </div>
+  );
 }
 
 export default AppLayout;
