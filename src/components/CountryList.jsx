@@ -1,22 +1,10 @@
 import { useEffect, useState } from "react";
 import styles from "../css/CityList.module.css";
+import { useCities } from "../contexts/CityContext";
 
 function CountryList() {
-  const [cities, setCities] = useState([]);
 
-  useEffect(() => {
-    async function getCities() {
-      try {
-        const response = await fetch("http://localhost:9000/cities");
-        const data = await response.json();
-        setCities(data);
-      } catch (err) {
-        console.log(err.message);
-      }
-    }
-    getCities();
-  }, []);
-
+  const {cities} = useCities();
   const countries = [];
   cities.forEach((city) => {
     if (!countries.includes(city.country)) {

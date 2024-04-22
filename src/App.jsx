@@ -7,10 +7,12 @@ import AppLayout from './components/AppLayout';
 import CityList from './components/CityList';
 import CountryList from './components/CountryList';
 import CityDetails from './components/CityDetails';
+import { CityProvider } from './contexts/CityContext';
  
 function App() {
   return (
     <>
+    <CityProvider>
       <BrowserRouter>
         <Navbar />
         <Routes>
@@ -26,6 +28,7 @@ function App() {
           </Route>
         </Routes>
       </BrowserRouter>
+      </CityProvider>
     </>
   );
 }
